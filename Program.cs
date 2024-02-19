@@ -9,6 +9,8 @@ Console.WriteLine(
     "4 Обновить существующую задачу\n" +
     "5 Выход");
 List<string> list = new List<string>();
+ToDo toDo = new ToDo();
+list = toDo.TaskToDo;
 
 do
 {
@@ -17,6 +19,10 @@ do
     {
         case "1":
             mesTsk = 1;
+            for (int i = 0; i < list.; i++)
+            {
+                Cosole
+            }    
 
             break;
         case "2":
