@@ -111,6 +111,7 @@ class ToDo
         if (this.id == Id)
         {
             Console.WriteLine($"По запросу найден:\n {ListToDo[this.id]} ");
+            
         }
     }
 }
