@@ -18,7 +18,16 @@ namespace SimpleToDoList
                 "5 Выход");
             List<string> list = new List<string>();
             ToDo toDo = new ToDo();
-         //   list = toDo.TaskToDo;
+
+            int id = -1;
+            string title = "";
+            string description = "";
+            DateTime dueDate;
+            bool isCopleted =false;
+
+
+            string id_str = "";
+
 
             do
             {
@@ -29,12 +38,45 @@ namespace SimpleToDoList
                         mesTsk = 1;
                         for (int i = 0; i < 10; i++)
                         {
-                            //Cosole
+                            Console.WriteLine("");
                         }
 
                         break;
                     case "2":
                         mesTsk = 2;
+                        
+                        Random r =   new Random();
+                        id = r.Next() + r.Next() / r.Next();
+                        id_str = id.ToString();
+                        Console.WriteLine("Создание новой задачи: \n Заголовок:");
+                        title = Console.ReadLine();
+
+                        Console.WriteLine("Описание:");
+                        description = Console.ReadLine();
+
+                        Console.WriteLine("Дата воддить в формате ( 01.01.2000 ):");
+                        dueDate = Convert.ToDateTime(Console.ReadLine());
+
+                        Console.WriteLine("Выполнена или нет (Y или N):");
+                        string text = Console.ReadLine();
+                        int n = 0;
+                        do
+                            if (text == "y" || text == "Y" || text == "у" || text == "У")
+                            {
+                                n = 1;
+                                isCopleted = true;
+                                text = "";
+                            }
+                            else if (text == "n" || text == "N" || text == "Н" || text == "Н")
+                            {
+                                n = 2;
+                                isCopleted = false;
+                                text = "";
+                            }
+                        while (n == 1 || n == 2 );
+
+
+                        toDo.AddToDo(id);
                         break;
                     case "3":
                         mesTsk = 3;
