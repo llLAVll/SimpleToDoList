@@ -77,7 +77,7 @@ namespace SimpleToDoList
                         while (n == 1 || n == 2 );
 
 
-                        toDo.AddToDo(id);
+                        //toDo.AddToDo(id);
                         break;
                     case "3":
                         mesTsk = 3;
