@@ -7,15 +7,15 @@ namespace SimpleToDoList
         public static void Main(string[] args)
         {
 
-            Console.WriteLine("Привет вот мой консольный вариант ToDo листа выбери задачу:");
+            Console.WriteLine("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ ToDo пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:");
             int mesTsk = 0;
 
             Console.WriteLine(
-                "1 Получить список задач;\n" +
-                "2 Создать новую задачу\n" +
-                "3 Удалить существующую задачу\n" +
-                "4 Обновить существующую задачу\n" +
-                "5 Выход  ");
+                "1 пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ;\n" +
+                "2 пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ\n" +
+                "3 пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ\n" +
+                "4 пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ\n" +
+                "5 пїЅпїЅпїЅпїЅпїЅ  ");
                 
             List<string> list = new List<string>();
             ToDo toDo = new ToDo();
@@ -49,26 +49,26 @@ namespace SimpleToDoList
                         Random r =   new Random();
                         id = r.Next() + r.Next() / r.Next();
                         id_str = id.ToString();
-                        Console.WriteLine("Создание новой задачи: \n Заголовок:");
+                        Console.WriteLine("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: \n пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:");
                         title = Console.ReadLine();
 
-                        Console.WriteLine("Описание:");
+                        Console.WriteLine("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:");
                         description = Console.ReadLine();
 
-                        Console.WriteLine("Дата воддить в формате ( 01.01.2000 ):");
+                        Console.WriteLine("пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ ( 01.01.2000 ):");
                         dueDate = Convert.ToDateTime(Console.ReadLine());
 
-                        Console.WriteLine("Выполнена или нет (Y или N):");
+                        Console.WriteLine("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ (Y пїЅпїЅпїЅ N):");
                         string text = Console.ReadLine();
                         int n = 0;
                         do
-                            if (text == "y" || text == "Y" || text == "у" || text == "У")
+                            if (text == "y" || text == "Y" || text == "пїЅ" || text == "пїЅ")
                             {
                                 n = 1;
                                 isCopleted = true;
                                 text = "";
                             }
-                            else if (text == "n" || text == "N" || text == "Н" || text == "Н")
+                            else if (text == "n" || text == "N" || text == "пїЅ" || text == "пїЅ")
                             {
                                 n = 2;
                                 isCopleted = false;
@@ -87,11 +87,11 @@ namespace SimpleToDoList
                         break;
                     case "5":
                         mesTsk = 5;
-                        Console.WriteLine("До скорой встречи");
-                        Environment.Exit(0); // Закрыть консоль
+                        Console.WriteLine("пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+                        Environment.Exit(0); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
                         break;
                     default:
-                        Console.WriteLine("Такой команды нет :(");
+                        Console.WriteLine("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ :(");
                         mesTsk = -1;
                         break;
                 }
@@ -124,7 +124,7 @@ namespace SimpleToDoList
             this.dueDate = DueDate;
             this.isCopleted = IsCopleted;
 
-            //Надо ли?
+            //пїЅпїЅпїЅпїЅ пїЅпїЅ?
             this.TaskToDo = TaskToDo;
         }
 
@@ -153,7 +153,7 @@ namespace SimpleToDoList
 
             if (this.title == Title)
             {
-                Console.WriteLine($"По запросу найден:\n {ListToDo[this.id]} ");
+                Console.WriteLine($"пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:\n {ListToDo[this.id]} ");
             }
 
         }
@@ -163,7 +163,7 @@ namespace SimpleToDoList
 
             if (this.id == Id)
             {
-                Console.WriteLine($"По запросу найден:\n {ListToDo[this.id]} ");
+                Console.WriteLine($"пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:\n {ListToDo[this.id]} ");
 
             }
         }
