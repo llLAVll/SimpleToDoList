@@ -15,7 +15,7 @@ namespace SimpleToDoList
                 "2 Создать новую задачу\n" +
                 "3 Удалить существующую задачу\n" +
                 "4 Обновить существующую задачу\n" +
-                "5 Выход");
+                "5 Выход  ");
             List<string> list = new List<string>();
             ToDo toDo = new ToDo();
 
