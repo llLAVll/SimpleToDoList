@@ -6,16 +6,16 @@ namespace SimpleToDoList
 
         public static void Main(string[] args)
         {
-
-            Console.WriteLine("������ ��� ��� ���������� ������� ToDo ����� ������ ������:");
+            
+            Console.WriteLine("Привет вот мой консольный вариант ToDo листа выбери задачу:");
             int mesTsk = 0;
 
             Console.WriteLine(
-                "1 �������� ������ �����;\n" +
-                "2 ������� ����� ������\n" +
-                "3 ������� ������������ ������\n" +
-                "4 �������� ������������ ������\n" +
-                "5 �����  ");
+                "1 Получить список задач;\n" +
+                "2 Создать новую задачу\n" +
+                "3 Удалить существующую задачу\n" +
+                "4 Обновить существующую задачу\n" +
+                "5 Выход  ");
                 
             List<string> list = new List<string>();
             ToDo toDo = new ToDo();
@@ -49,26 +49,26 @@ namespace SimpleToDoList
                         Random r =   new Random();
                         id = r.Next() + r.Next() / r.Next();
                         id_str = id.ToString();
-                        Console.WriteLine("�������� ����� ������: \n ���������:");
+                        Console.WriteLine("Создание новой задачи: \n Заголовок:");
                         title = Console.ReadLine();
 
-                        Console.WriteLine("��������:");
+                        Console.WriteLine("Описание:");
                         description = Console.ReadLine();
 
-                        Console.WriteLine("���� ������� � ������� ( 01.01.2000 ):");
+                        Console.WriteLine("Дата воддить в формате ( 01.01.2000 ):");
                         dueDate = Convert.ToDateTime(Console.ReadLine());
 
-                        Console.WriteLine("��������� ��� ��� (Y ��� N):");
+                        Console.WriteLine("Выполнена или нет (Y или N):");
                         string text = Console.ReadLine();
                         int n = 0;
                         do
-                            if (text == "y" || text == "Y" || text == "�" || text == "�")
+                            if (text == "y" || text == "Y" || text == "у" || text == "У")
                             {
                                 n = 1;
                                 isCopleted = true;
                                 text = "";
                             }
-                            else if (text == "n" || text == "N" || text == "�" || text == "�")
+                            else if (text == "n" || text == "N" || text == "Н" || text == "Н")
                             {
                                 n = 2;
                                 isCopleted = false;
@@ -87,11 +87,11 @@ namespace SimpleToDoList
                         break;
                     case "5":
                         mesTsk = 5;
-                        Console.WriteLine("�� ������ �������");
-                        Environment.Exit(0); // ������� �������
+                        Console.WriteLine("До скорой встречи");
+                        Environment.Exit(0); // Закрыть консоль
                         break;
                     default:
-                        Console.WriteLine("����� ������� ��� :(");
+                        Console.WriteLine("Такой команды нет :(");
                         mesTsk = -1;
                         break;
                 }
@@ -124,7 +124,7 @@ namespace SimpleToDoList
             this.dueDate = DueDate;
             this.isCopleted = IsCopleted;
 
-            //���� ��?
+            //Надо ли?
             this.TaskToDo = TaskToDo;
         }
 
@@ -153,7 +153,7 @@ namespace SimpleToDoList
 
             if (this.title == Title)
             {
-                Console.WriteLine($"�� ������� ������:\n {ListToDo[this.id]} ");
+                Console.WriteLine($"По запросу найден:\n {ListToDo[this.id]} ");
             }
 
         }
@@ -163,7 +163,7 @@ namespace SimpleToDoList
 
             if (this.id == Id)
             {
-                Console.WriteLine($"�� ������� ������:\n {ListToDo[this.id]} ");
+                Console.WriteLine($"По запросу найден:\n {ListToDo[this.id]} ");
 
             }
         }
